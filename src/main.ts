@@ -45,7 +45,7 @@ const sendMessage = async()=>{
   } catch(err:any){
     // console.log(err.response.data.message);
     const errorInfo = err?.response?.data
-    message(`💣 Runing Error Because ${errorInfo?.message || err}`,"red")
+    message(`💣 Runing Error Because ${errorInfo?.message || err.message}`,"red")
     if(errorInfo.code === 20016){
       message(`🤨 Current Now Feucet Is Cooling.`,"yellow")
       await sleep(2)
