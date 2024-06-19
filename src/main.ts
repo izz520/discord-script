@@ -33,9 +33,6 @@ const sendMessage = async()=>{
       headers: {
         "content-type": "application/json",
         "authorization": discordAuth
-    },proxy: {
-        host: "127.0.0.1",
-        port: 7893
     }
     })
     message(`👍 Faucet Token Success`,"green")
@@ -44,12 +41,11 @@ const sendMessage = async()=>{
     const nextRunTime =  nextTime(time)
     sleepTime =  time
     message(`😴 Next Run Start Is ${nextRunTime}`,"yellow")
-    https://api.day.app/4XzmUxtntebNAV8UjWJaFK/这里改成你自己的推送内容
     axios.get(`https://api.day.app/${barkKey}/${"Artela Faucet Success"}`)
   } catch(err:any){
     // console.log(err.response.data.message);
-    const errorInfo = err.response.data
-    message(`💣 Runing Error Because ${errorInfo.message}`,"red")
+    const errorInfo = err?.response?.data
+    message(`💣 Runing Error Because ${errorInfo.message || err}`,"red")
     if(errorInfo.code === 20016){
       message(`🤨 Current Now Feucet Is Cooling.`,"yellow")
       await sleep(2)
