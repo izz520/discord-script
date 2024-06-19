@@ -1,0 +1,20 @@
+{
+  "name": "artela_faucet",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "axios-https-proxy-fix": "^0.17.1",
+    "chalk": "4.1.2",
+    "dayjs": "^1.11.11",
+    "dotenv": "^16.4.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "dev": "ts-node src/main.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.5"
+  }
+}
